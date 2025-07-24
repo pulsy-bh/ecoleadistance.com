@@ -1,24 +1,38 @@
 <nav class="menu-haut">
   <div class="navbar-header">
-     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-     <span class="sr-only">Navigation</span>
-     <span class="icon-bar"></span>
-     <span class="icon-bar"></span>
-     <span class="icon-bar"></span>
-     </button>
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
   </div>
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="menu-top">
-       <li><a class="{% if page.url == '/' %}active{% endif %}" href="{{ site.baseurl }}/">Accueil</a></li>
-       <li><a class="{% if page.url == '/notre-entreprise/' %}active{% endif %}" href="{{ site.baseurl }}/notre-entreprise">Notre entreprise</a></li>
-       <li><a class="{% if page.url == '/verandas-bois/' %}active{% endif %}" href="{{ site.baseurl }}/verandas-bois">Vérandas Bois</a></li>
-       <li><a class="{% if page.url == '/verandas-aluminium/' %}active{% endif %}" href="{{ site.baseurl }}/verandas-aluminium">Vérandas Aluminium </a></li>
-       <li><a class="{% if page.url == '/pergolas-aluminium-et-bois/' %}active{% endif %}" href="{{ site.baseurl }}/pergolas-aluminium-et-bois">Pergolas aluminium et bois</a></li>
-       <li><a class="{% if page.url == '/nos-realisation/' %}active{% endif %}" href="{{ site.baseurl }}/nos-realisation">Nos réalisations</a></li>
-       <li class="visible-xs"><a class="{% if page.url == '/devis/' %}active{% endif %}" href="{{ site.baseurl }}/devis">Devis</a></li>
-       <li><a class="{% if page.url == '/contact/' %}active{% endif %}" href="{{ site.baseurl }}/contact">Contact</a></li>
-       <li class="visible-xs"><a href="tel:{{ site.data.company.phone1 }}" class="call-to-action1"><i class="fa fa-phone-square"></i>{{ site.data.company.phone1 }}</a></li>
-       <!-- <li class="visible-xs"> <a href="tel: {{ site.data.company.phone1 }}" class="call-to-action1"><i class="fa fa-phone-square"></i>{{ site.data.company.phone1 }}</a></li> -->
+      <li><a class="{% if page.url == '/' %}active{% endif %}" href="{{ site.baseurl }}/">
+          <div class="home3"><i class=""><img src="{{ site.baseurl }}/assets/img/logo.png" class="img-responsive mg-auto" alt="logo educ'etic"></i></div>
+        </a></li>
+      <li><a class="{% if page.url == '/presentation' %}active{% endif %}" href="{{ site.baseurl }}/presentation">Présentation</a></li>
+      <li><a class="{% if page.url == '/pedagogie-methode-singapour' %}active{% endif %}" href="{{ site.baseurl }}/pedagogie-methode-singapour">Pédagogie: méthode singapour</a></li>
+      <li><a class="{% if page.url == '/options-exclusives' %}active{% endif %}" href="{{ site.baseurl }}/options-exclusives">Options exclusives</a></li>
+      <li><a class="{% if page.url == '/inscription' %}active{% endif %}" href="{{ site.baseurl }}/inscription">Inscription</a></li>
+      <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Mes outils<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a class="{% if page.url == '/nos-manuels' %}active{% endif %}" href="{{ site.baseurl }}/nos-manuels">Nos manuels</a></li>
+          <li><a href="https://accounts.edumoov.com/auth/realms/edumoov/protocol/openid-connect/auth?client_id=edumoov&redirect_uri=https%3A%2F%2Fwww.edumoov.com%2Fconnect.php%3Fredirect_uri%3Dhttps%253A%252F%252Fwww.edumoov.com%252Fusers%252FmenuMember&state=17f04186-cdcf-4783-9cc7-5fd7042f5ee6&nonce=e146fdef-fd47-40f8-8184-ffefb4517c2f&response_mode=fragment&response_type=code&scope=openid" target="_blank" rel="noreferrer">Educartable</a></li>
+          <li><a href="https://0912337w.index-education.net/pronote/" target="_blank" rel="noreferrer">Pronote</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours à distance<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a class="{% if page.url == '/cours-virtuels' %}active{% endif %}" href="{{ site.baseurl }}/cours-virtuels">Cours virtuels</a></li>
+          <li><a class="{% if page.url == '/sante-ecran' %}active{% endif %}" href="{{ site.baseurl }}/sante-ecran">Santé écran</a></li>
+          <li><a class="{% if page.url == '/zoom' %}active{% endif %}" href="{{ site.baseurl }}/zoom">Zoom</a></li>
+        </ul>
+      </li>
+      <li><a class="{% if page.url == '/contact' %}active{% endif %}" href="{{ site.baseurl }}/contact">Contact</a></li>
+      <li><a class="{% if page.url == '/devis' %}active{% endif %}" href="{{ site.baseurl }}/devis">Demande de renseignement</a></li>
     </ul>
   </div>
 </nav>

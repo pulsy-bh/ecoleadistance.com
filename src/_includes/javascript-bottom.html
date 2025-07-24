@@ -1,11 +1,14 @@
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<script src="{{ '/assets/js/jquery-1.11.0.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/bootstrap.min.js' | relative_url }}"></script>
+<link
+  href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+  rel="stylesheet">
+
+<script src="{{ site.baseurl }}/assets/js/jquery-1.11.0.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/bootstrap.min.js"></script>
 <script src="https://use.fontawesome.com/24b7f338c4.js"></script>
-<script src="{{ '/assets/js/lightbox-2.6.min.js' | relative_url }}" type="text/javascript"></script>
-<script src="{{ '/assets/js/wow.min.js' | relative_url }}" type="text/javascript"></script>
-<script src="{{ '/assets/js/owl.carousel.min.js' | relative_url }}" type="text/javascript"></script>
-<script src="{{ '/assets/js/formSubmit.js' | relative_url }}"></script>
+<script src="{{ site.baseurl }}/assets/js/lightbox-2.6.min.js" type="text/javascript"></script>
+<script src="{{ site.baseurl }}/assets/js/wow.min.js" type="text/javascript"></script>
+<script src="{{ site.baseurl }}/assets/js/owl.carousel.min.js" type="text/javascript"></script>
+
 
 <div id='fb-root'></div>
 <script>(function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = '//connect.facebook.net/fr_FR/all.js#xfbml=1'; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
@@ -13,8 +16,9 @@
 <script
   type='text/javascript'>window.___gcfg = { lang: 'fr' }; (function () { var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://apis.google.com/js/platform.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })();</script>
 
-<script type="text/javascript">
 
+
+<script type="text/javascript">
   $(document).ready(function () {
     var $lightbox = $('#lightbox');
 
@@ -36,16 +40,17 @@
     $lightbox.on('shown.bs.modal', function (e) {
       var $img = $lightbox.find('img');
 
-      $lightbox.find('.modal-dialog').css({ 'width': $img.width() });
+      $lightbox.find('.modal-dialog').css({
+        'width': $img.width()
+      });
       $lightbox.find('.close').removeClass('hidden');
     });
   });
-
 </script>
 
 <script type="text/javascript">
-  var conf_name = "{{ site.data.company.name }}";
-  var conf_email = "{{ site.data.company.email }}";
+  var conf_name = "<?= $conf_name ?>";
+  var conf_email = "<?= $conf_email ?>";
   var modal_rgpd = '<div class="modal fade" id="modal-rgpd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">' +
     '        <div class="modal-dialog" role="document">' +
     '            <div class="modal-content">' +
@@ -98,8 +103,12 @@
 
   $('#carousel2').owlCarousel({
     loop: true,
+    autoplay: true,
     margin: 10,
+    autoplayTimeout: 5000,
+    smartSpeed: 2000,
     nav: true,
+    dots: false,
     responsive: {
       0: {
         items: 1
@@ -128,14 +137,16 @@
   });
 
   $('a[href^="#backTotop"]').click(function () {
+    var the_id = $(this).attr("href");
+
     $('html, body').animate({
-      scrollTop: 0
+      scrollTop: $(the_id).offset().top
     }, 'slow');
     return false;
   });
 </script>
-<script src="{{ '/assets/js/waypoints.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/jquery.counterup.min.js' | relative_url }}"></script>
+<script src="{{ site.baseurl }}/assets/js/waypoints.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/jquery.counterup.min.js"></script>
 <script type="text/javascript">
   $('.count').counterUp({
     delay: 10,
@@ -144,7 +155,9 @@
 </script>
 
 <script>
-  window.onscroll = function () { myFunction() };
+  window.onscroll = function () {
+    myFunction()
+  };
   var header = document.getElementById("menu");
   var sticky = header.offsetTop;
 
@@ -160,13 +173,29 @@
 
 
 
-
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-152975818-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154970985-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
   gtag('js', new Date());
 
-  gtag('config', 'UA-152975818-1');
+  gtag('config', 'UA-154970985-1');
+</script>
+
+<script>
+  //defer iframes
+
+  $('iframe').load(function () {
+    $(this).contents().find('img').css({
+      width: '100%',
+      height: '100%'
+    });
+    $(this).contents().find('img').click('click', () => {
+      this.setAttribute('src', this.getAttribute('data-src'));
+    })
+  })
 </script>

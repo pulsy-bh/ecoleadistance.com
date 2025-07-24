@@ -1,34 +1,38 @@
 <header>
-    {% include menu1.html %}
-  </header>
-  {% if page.url == "/" %}
-    <div class="bandeau wow fadeIn" data-wow-duration="1s" data-wow-delay="0">
-      <div class="container baseline">
-          <div class="row middle">
-            <div class="col-lg-12 text-left">
-              <div class="element">
-              <h1 class="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s"><span>Vos vérandas sur-mesure dans le 77</span></h1>
-              <p class="slogan text-left wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.3s">Votre concepteur, fabricant et installateur de vérandas sur mesure en bois et aluminium dans le 77</p>
-              <a href="tel:{{ site.data.company.phone1 }}" class="call-to-action wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.5s"><i class="fa fa-phone-square"></i>{{ site.data.company.phone1 }}</a>
-              <div class="cta-bandeau">
-                <a href="{{ site.baseurl }}/contact" class="button1 style2 cta wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="2.1s">
-                  <span class='txt'>Contactez-nous</span>
-                  <i class="fa fa-envelope"></i>
-                </a>
-              </div>
-              </div>
-            </div>
-          </div>
+  {% include menu1.html %}
+</header>
+{% if page.url == "/" %}
+  <div class="bandeau wow fadeIn" data-wow-duration="1s" data-wow-delay="0">
+    <video id="vid" width="100%" height="100%" label="fullHD" autoplay muted playinline loop>
+      <source src="{{ site.baseurl }}/assets/img/video3.mp4" type="video/mp4">
+    </video>
+    <div class="lang text-center">
+      <div class="flex2 langue  hidden-xs">
+        <img src="{{ site.baseurl }}/assets/img/icon/1.png" alt="icone chinois" class="img-responsive wow zoomIn" data-wow-duration="1.4s" data-wow-delay="1.5s">
+        <img src="{{ site.baseurl }}/assets/img/icon/5.png" alt="icone arabe" class="img-responsive wow zoomIn" data-wow-duration="1.4s" data-wow-delay="2.5s">
+        <img src="{{ site.baseurl }}/assets/img/icon/2.png" alt="icone maths" class="img-responsive wow zoomIn" data-wow-duration="1.5s" data-wow-delay="3.5s">
+        <img src="{{ site.baseurl }}/assets/img/icon/4.png" alt="icone français" class="img-responsive wow zoomIn" data-wow-duration="1.6s" data-wow-delay="4.5s">
+        <img src="{{ site.baseurl }}/assets/img/icon/3.png" alt="icone english" class="img-responsive wow zoomIn" data-wow-duration="1.7s" data-wow-delay="5.5s">
+      </div>
+      <span class="title6">Educ'Etic, École à distance et visioconférence : Maternelle / Elémentaire / Collège</span>
+      <div class="flex2">
+        <a href="{{ site.baseurl }}/contact" class="button2">
+          <span class="txt">Contactez-nous</span>
+        </a>
+        <a href="{{ site.baseurl }}/inscription" class="button1">
+          <span class="txt">Inscription</span>
+        </a>
       </div>
     </div>
-  {% endif %}
-  <div class="backTotop">
-    <a href="#backTotop">
+  </div>
+{% endif %}
+<div class="backTotop">
+  <a href="#backTotop">
     <i class="fa fa-angle-up"></i>
-    </a>
-  </div>
-  <div class="button-fix visible-xs">
-    <a href="tel:{{ site.data.company.phone1 }}" class="button1">
-        <span class="txt">{{ site.data.company.phone1 }}</span>
-    </a>
-  </div>
+  </a>
+</div>
+<div class="button-fix">
+  <a href="tel:{{ site.data.company.phone1 }}" class="button1">
+    <span class="txt">{{ site.data.company.phone1 }}</span>
+  </a>
+</div>
