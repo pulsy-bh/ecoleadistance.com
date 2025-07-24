@@ -1,0 +1,172 @@
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="{{ '/assets/js/jquery-1.11.0.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/bootstrap.min.js' | relative_url }}"></script>
+<script src="https://use.fontawesome.com/24b7f338c4.js"></script>
+<script src="{{ '/assets/js/lightbox-2.6.min.js' | relative_url }}" type="text/javascript"></script>
+<script src="{{ '/assets/js/wow.min.js' | relative_url }}" type="text/javascript"></script>
+<script src="{{ '/assets/js/owl.carousel.min.js' | relative_url }}" type="text/javascript"></script>
+<script src="{{ '/assets/js/formSubmit.js' | relative_url }}"></script>
+
+<div id='fb-root'></div>
+<script>(function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = '//connect.facebook.net/fr_FR/all.js#xfbml=1'; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
+<script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'twitter-wjs');</script>
+<script
+  type='text/javascript'>window.___gcfg = { lang: 'fr' }; (function () { var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://apis.google.com/js/platform.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })();</script>
+
+<script type="text/javascript">
+
+  $(document).ready(function () {
+    var $lightbox = $('#lightbox');
+
+    $('[data-target="#lightbox"]').on('click', function (event) {
+      var $img = $(this).find('img'),
+        src = $img.attr('src'),
+        alt = $img.attr('alt'),
+        css = {
+          'maxWidth': $(window).width() - 100,
+          'maxHeight': $(window).height() - 100
+        };
+
+      $lightbox.find('.close').addClass('hidden');
+      $lightbox.find('img').attr('src', src);
+      $lightbox.find('img').attr('alt', alt);
+      $lightbox.find('img').css(css);
+    });
+
+    $lightbox.on('shown.bs.modal', function (e) {
+      var $img = $lightbox.find('img');
+
+      $lightbox.find('.modal-dialog').css({ 'width': $img.width() });
+      $lightbox.find('.close').removeClass('hidden');
+    });
+  });
+
+</script>
+
+<script type="text/javascript">
+  var conf_name = "{{ site.data.company.name }}";
+  var conf_email = "{{ site.data.company.email }}";
+  var modal_rgpd = '<div class="modal fade" id="modal-rgpd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">' +
+    '        <div class="modal-dialog" role="document">' +
+    '            <div class="modal-content">' +
+    '                <div class="modal-body">' +
+    '                  * En cochant cette case, j’accepte que mes données personnelles soient collectées et traitées par le service commercial de ' + conf_name + '.' +
+    '                   Leur traitement a pour finalité de traiter votre demande spécifique.<br>' +
+    '                   Les données collectées sont conservées pour la durée de nos relations commerciales + 1 an. Conformément à la loi' +
+    '                   « informatique et libertés », vous pouvez exercer votre droit d’accès aux données vous concernant et les faire rectifier' +
+    '                   auprès de notre référent à <a href="mailto:"' + conf_email + '">' + conf_email + '</a>.<br>' +
+    '                   Vous disposez également d’un droit de rectification, à l’oubli, à la portabilité, de limitation ou d’opposition auprès de notre référent à ' +
+    '                   <a href="mailto:' + conf_email + '">' + conf_email + '</a>.<br><br>' +
+    '                   En dernier recours, vous pouvez déposer une réclamation auprès de la CNIL.' +
+    '                </div>' +
+    '                <div class="modal-footer">' +
+    '                    <div class="form-group text-center">' +
+    '                        <button type="button" class="btn btn-default btn-primary" data-dismiss="modal">Fermer</button>' +
+    '                    </div>' +
+    '                </div>' +
+    '            </div>' +
+    '        </div>' +
+    '    </div>';
+  $(document).ready(function () {
+    $(".info-rgpd label").after(function () {
+      return '&nbsp;<a href="#" data-toggle="modal" data-target="#modal-rgpd"><i class="fa fa-info-circle"></i></a>' + modal_rgpd;
+    });
+  });
+</script>
+
+<script>
+  $('#carousel1').owlCarousel({
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    smartSpeed: 2000,
+    dots: false,
+    margin: 0,
+    nav: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 3
+      },
+      1000: {
+        items: 4
+      }
+    }
+  })
+
+  $('#carousel2').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 1
+      },
+      1000: {
+        items: 1
+      }
+    }
+  })
+</script>
+
+<script>
+  new WOW().init();
+</script>
+
+<script type="text/javascript">
+  $(window).scroll(function () {
+    if ($(document).scrollTop() > 350) {
+      $(".backTotop").addClass('active1');
+    } else {
+      $(".backTotop").removeClass('active1');
+    }
+  });
+
+  $('a[href^="#backTotop"]').click(function () {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 'slow');
+    return false;
+  });
+</script>
+<script src="{{ '/assets/js/waypoints.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/jquery.counterup.min.js' | relative_url }}"></script>
+<script type="text/javascript">
+  $('.count').counterUp({
+    delay: 10,
+    time: 2000
+  });
+</script>
+
+<script>
+  window.onscroll = function () { myFunction() };
+  var header = document.getElementById("menu");
+  var sticky = header.offsetTop;
+
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("fixmenu");
+
+    } else {
+      header.classList.remove("fixmenu");
+    }
+  }
+</script>
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-152975818-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-152975818-1');
+</script>
