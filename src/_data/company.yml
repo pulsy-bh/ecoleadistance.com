@@ -12,7 +12,7 @@ phone2: "01 86 76 71 29"
 
 # fax: "01 00 00 00 00"
 
-id_company: 430
+id_company: 239
 name_website: "ecoleadistance.com"
 addressOnline: "http://www.ecoleadistance.com/"
 email: "e-learning@educ-etic.fr"
@@ -27,11 +27,11 @@ ovh: "<h2>OVH</h2>Société par actions simplifiée au capital de 10 000 000 €
 gandi: "<h2>Gandi</h2><p>Société par actions simplifiée au capital 300 000 €,<br>Dont le siège social est établi 63 Boulevard Massena 75013 Paris<br>Immatriculée au Registre du Commerce et des Sociétés sous le numéro RCS Paris B 423 093 459</p>"
 hebergement: $gandi
 
-website: 430
+website: 239
 
 recaptcha:
-  client: 6LfBQIorAAAAAEoLhrNSRUOQEqOW3o7s9jBjDaW0
-  server: 6LfBQIorAAAAALnozqmb3j7eMFaLfXknbiF4Ett0
+  client: 6LdEro4rAAAAACXZPXlnUwn1ms8ezpIrvRVNC8Ib
+  server: 6LdEro4rAAAAACPgH4YEvt1Aa2A86Z67IQtMO4Tt
   
 lang: fr
 url:
