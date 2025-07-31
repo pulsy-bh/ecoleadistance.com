@@ -236,15 +236,15 @@ description: ""
                 <ul class="list1">
                     <li>
                         <p><strong>Par téléphone,</strong><br>Avant toute inscription, il est conseillé de nous
-                            contacter par téléphone au: <a href="tel:<?=$call_phone1?>">
-                                <?=$conf_phone1?>
+                            contacter par téléphone au: <a href="tel:{{ site.data.company.phone1 }}">
+                                {{ site.data.company.phone1 }}
                             </a></p>
                     </li>
                     <li>
                         <p><strong>Par e-mail,</strong><br>Imprimez le <a href="{{ site.baseurl }}/assets/img/bulletin.pdf"
                                 target="_blank">bulletin d'inscription</a> (paiement par Carte Bancaire ou virement) et
-                            retournez le scanné à <a href="mailto:<?=$conf_email?>">
-                                <?=$conf_email?>
+                            retournez le scanné à <a href="mailto:{{ site.data.company.email }}">
+                                {{ site.data.company.email }}
                             </a>
                         </p>
                     </li>
@@ -252,7 +252,7 @@ description: ""
                         <p><strong>Par courrier,</strong><br>Retournez le <a href="{{ site.baseurl }}/assets/img/bulletin.pdf"
                                 target="_blank">bulletin d'inscription</a> accompagné de votre règlement à l’adresse
                             suivante :
-                            <?=$conf_address." ".$conf_zipCode." ".$conf_city?>
+                            {{ site.data.company.address }} {{ site.data.company.zipCode }} {{ site.data.company.city }}
                         </p>
                     </li>
                 </ul>
